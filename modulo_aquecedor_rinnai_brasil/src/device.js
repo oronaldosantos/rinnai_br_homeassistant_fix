@@ -86,6 +86,9 @@ const updateParameters = (retries = 0) => {
             entities.outletWaterTemperature.updateAvailability(false)
             entities.power.updateAvailability(false)
             entities.waterFlow.updateAvailability(false)
+            entities.device_ip_address.updateAvailability(false)
+            entities.device_mac_address.updateAvailability(false)
+            entities.wifi_signal_strength.updateAvailability(false)
         })
 }
 
