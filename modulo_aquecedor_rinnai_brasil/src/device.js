@@ -60,12 +60,18 @@ const updateParameters = (retries = 0) => {
             outletTemperature,
             powerInkW,
             waterFlow,
-            workingTime }) => {
+            workingTime,
+            device_ip_address,
+            device_mac_address,
+            wifi_signal_strength }) => {
 
             entities.inletWaterTemperature.publish(inletTemperature)
             entities.outletWaterTemperature.publish(outletTemperature)
             entities.power.publish(powerInkW)
             entities.waterFlow.publish(waterFlow)
+            entities.device_ip_address.publish(device_ip_address)
+            entities.device_mac_address.publish(device_mac_address)
+            entities.wifi_signal_strength.publish(wifi_signal_strength)
 
         })
         .catch(error => {
