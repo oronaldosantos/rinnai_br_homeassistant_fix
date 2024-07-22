@@ -81,7 +81,6 @@ const outletWaterTemperature = createEntity('sensor', 'outlet_water_temperature'
 })
 
 const heatingState = createEntity('binary_sensor', 'heating_state', {
-    device_class: 'power',
     icon: 'mdi:fire',
     name: 'Aquecendo água',
 })
@@ -96,6 +95,7 @@ const switchHeating = createEntity('switch', 'heating_switch', {
 const waterFlow = createEntity('sensor', 'water_flow', {
     icon: 'mdi:water',
     name: 'Fluxo de água',
+    device_class: 'volume_flow_rate',
     unit_of_measurement: 'L/min'
 })
 
@@ -141,12 +141,21 @@ const decreaseTemperatureButton = createEntity('button', 'decrease_temperature',
     name: 'Diminuir temperatura'
 })
 
-
-const wifiSignal = createEntity('sensor', 'wifi_signal_strength', {
+const wifi_signal_strength = createEntity('sensor', 'wifi_signal_strength', {
     icon: 'mdi:wifi',
     name: 'Potência do sinal wifi',
     device_class: 'signal_strength',
     unit_of_measurement: 'dBm'
+})
+
+const device_ip_address = createEntity('sensor', 'device_ip_address', {
+    icon: 'mdi:ip',
+    name: 'Ip Address'
+})
+
+const device_mac_address = createEntity('sensor', 'device_mac_address', {
+    icon: 'mdi:eye',
+    name: 'MAC Address'
 })
 
 module.exports = {
@@ -162,5 +171,7 @@ module.exports = {
     workingTime,
     increaseTemperatureButton,
     decreaseTemperatureButton,
-    wifiSignal
+    wifi_signal_strength,
+    device_ip_address,
+    device_mac_address
 }
