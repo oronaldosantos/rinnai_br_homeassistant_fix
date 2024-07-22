@@ -148,6 +148,16 @@ const wifi_signal_strength = createEntity('sensor', 'wifi_signal_strength', {
     unit_of_measurement: 'dBm'
 })
 
+const ipAddress = createEntity('text', 'ipAddress', {
+    icon: 'mdi:ip',
+    name: 'IP Address',
+})
+
+const macAddress = createEntity('text', 'macAddress', {
+    icon: 'mdi:eye',
+    name: 'MAC Address',
+})
+
 module.exports = {
     waterTargetTemperature,
     inletWaterTemperature,
@@ -161,5 +171,7 @@ module.exports = {
     workingTime,
     increaseTemperatureButton,
     decreaseTemperatureButton,
-    wifi_signal_strength
+    wifi_signal_strength,
+    ipAddress,
+    macAddress
 }
