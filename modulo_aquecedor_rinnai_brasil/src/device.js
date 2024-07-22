@@ -61,8 +61,6 @@ const updateParameters = (retries = 0) => {
             powerInkW,
             waterFlow,
             workingTime,
-            device_ip_address,
-            device_mac_address,
             wifi_signal_strength }) => {
 
             entities.inletWaterTemperature.publish(inletTemperature)
