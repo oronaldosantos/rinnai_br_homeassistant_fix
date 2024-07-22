@@ -148,12 +148,12 @@ const wifi_signal_strength = createEntity('sensor', 'wifi_signal_strength', {
     unit_of_measurement: 'dBm'
 })
 
-const device_ip_address = createEntity('sensor', 'device_ip_address', {
+const device_ip_address = createEntity('text', 'device_ip_address', {
     icon: 'mdi:ip',
     name: 'Ip Address'
 })
 
-const device_mac_address = createEntity('sensor', 'device_mac_address', {
+const device_mac_address = createEntity('text', 'device_mac_address', {
     icon: 'mdi:eye',
     name: 'MAC Address'
 })
