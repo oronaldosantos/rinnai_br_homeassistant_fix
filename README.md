@@ -1,5 +1,11 @@
-# Integração Módulo Wifi Rinnai com Home Assistant (Não oficial)
+
+
+# Integração Módulo Wifi Rinnai com Home Assistant (Não oficial) V2
 Addon para integrar no Home Assistant os aquecedores de água a gás da Rinnai Brasil que suportam o módulo ROU003.
+
+```
+Este projeto é um clone do projeto 'https://github.com/ale-jr/rinnai_br_homeassistant' de autoria do Alexandre Fernandes Junior(@ale-jr). por falta de atualizações do repositório original.
+```
 
 # Considerações
 - Este projeto foi desenvolvido sob a licença MIT, sendo que este addon não foi certificado nem validado pela Rinnai, ao utilizar este addon você concorda com a utilização por sua própria conta e risco, não me reponsabilizo por nenhum mal funcionamento e/ou danos do aquecedor, módulo ou aplicativos (rinnai e home assistant) bem como danos físicos e materiais que possam ser causados pela utilização deste projeto. Você foi avisado!
@@ -12,7 +18,7 @@ Addon para integrar no Home Assistant os aquecedores de água a gás da Rinnai B
 3. Descobrir o IP do módulo na sua rede, essa parte é mais chatinha e como o módulo não utiliza mDNS nem define um nome de host é mais dificil de achar, uma das formas mais fáceis é ver no seu roteador ou utilizar um app chamado [Net Analyzer](https://play.google.com/store/apps/details?id=net.techet.netanalyzerlite.an) para descobrir quais são os ips na sua rede e ir tentando para cada endereço acessar a url `http://ip/bus` até ver ver uma tela cheia de números. Com o Net Analyzer é só tentar os endereços que tenham o fabricante `Espressif Inc.` (Sim, cobram 300 reais por um esp8266, mas até ai você pagou muito mais pelo software do que pelo hardware 😅😅😅😅)
 4. Adicione e instale este repositório como um repositório de addons do home assistant:
      - Em [http://homeassistant.local:8123/hassio/store](http://homeassistant.local:8123/hassio/store), clique no menu superior direito e depois clique em "repositórios"
-     - Cole a url deste projeto `https://github.com/ale-jr/rinnai_br_homeassistant`, clique em adicionar e feche o modal
+     - Cole a url deste projeto `https://github.com/oronaldosantos/rinnai_br_homeassistant_fix`, clique em adicionar e feche o modal
      - Clique botão no botão superior esquerdo e depois em "Verifique se há atualizações"
      - Pesquise por "Aquecedor Rinnai" e clique no card que aparecer, se não aparecer nenhum, tente reiniciar a instância do home assistant
      - Instale o addon
