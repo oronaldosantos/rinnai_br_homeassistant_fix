@@ -131,7 +131,7 @@ const getDeviceParams = () => {
             
             const device_ip_address = +params[16]
             const device_mac_address = +params[25]
-            const device_wifi_signal_strength = +params[37]
+            const wifi_signal_strength = +params[37]
             
             
             const waterFlow = round(+params[12] / 100)
@@ -146,7 +146,7 @@ const getDeviceParams = () => {
                 workingTime,
                 device_ip_address,
                 device_mac_address,
-                device_wifi_signal_strength
+                wifi_signal_strength
             }
         })
 }
