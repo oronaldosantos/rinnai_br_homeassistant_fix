@@ -129,9 +129,9 @@ const getDeviceParams = () => {
             const powerInkW = round(currentPowerInKCal * 0.014330754)
             const isPoweredOn = params[0] !== "11"
             
-            const device_ip_address = +params[16]
-            const device_mac_address = +params[25]
-            const wifi_signal_strength = +params[37]
+            const device_ip_address = params[16]
+            const device_mac_address = params[25]
+            const wifi_signal_strength = params[37]
             
             
             const waterFlow = round(+params[12] / 100)
