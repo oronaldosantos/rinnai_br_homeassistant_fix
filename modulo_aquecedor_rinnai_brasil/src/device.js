@@ -61,13 +61,17 @@ const updateParameters = (retries = 0) => {
             powerInkW,
             waterFlow,
             workingTime,
-            wifi_signal_strength }) => {
+            wifi_signal_strength,
+            ipAddress,
+            macAddress }) => {
 
             entities.inletWaterTemperature.publish(inletTemperature)
             entities.outletWaterTemperature.publish(outletTemperature)
             entities.power.publish(powerInkW)
             entities.waterFlow.publish(waterFlow)
             entities.wifi_signal_strength.publish(wifi_signal_strength)
+            entities.ipAddress.publish(ipAddress)
+            entities.macAddress.publish(macAddress)
 
         })
         .catch(error => {
@@ -83,6 +87,8 @@ const updateParameters = (retries = 0) => {
             entities.power.updateAvailability(false)
             entities.waterFlow.updateAvailability(false)
             entities.wifi_signal_strength.updateAvailability(false)
+            entities.ipAddress.updateAvailability(false)
+            entities.macAddress.updateAvailability(false)
         })
 }
 
